@@ -1,6 +1,6 @@
 return {
   name = 'UnitExists',
   status = 'unimplemented',
-  inputs = 's',
+  inputs = {'', 's'},
   outputs = 'b',
 }

@@ -1,6 +1,6 @@
 return {
   name = 'UnitGetIncomingHeals',
   status = 'unimplemented',
-  inputs = 'ss?',
+  inputs = {'s', 'ss'},
   outputs = 'n',
 }

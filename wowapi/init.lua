@@ -27,8 +27,13 @@ return function(dir)
       assert(fn == t.name, ('invalid name %q in %q'):format(t.name, f))
       local bfn = getFn(t)
       local impl = not t.inputs and bfn or function(...)
+        -- Ignore trailing nils for our purposes.
+        local last = select('#', ...)
+        while last > 0 and (select(last, ...)) == nil do
+          last = last - 1
+        end
         local sig = ''
-        for i = 1, select('#', ...) do
+        for i = 1, last do
           local ty = type((select(i, ...)))
           if ty == 'string' then
             sig = sig .. 's'
@@ -38,7 +43,17 @@ return function(dir)
             error(('invalid argument %d of type %q to %q'):format(i, ty, fn))
           end
         end
-        assert(sig == t.inputs, ('invalid arguments to %q, expected %q, got %q'):format(fn, t.inputs, sig))
+        if type(t.inputs) == 'string' then
+          assert(sig == t.inputs, ('invalid arguments to %q, expected %q, got %q'):format(fn, t.inputs, sig))
+        elseif type(t.inputs) == 'table' then
+          local ok = false
+          for _, x in ipairs(t.inputs) do
+            ok = ok or sig == x
+          end
+          assert(ok, ('invalid arguments to %q, expected one of %q, got %q'):format(fn, table.concat(t.inputs), sig))
+        else
+          error(('invalid inputs type on %q'):format(fn))
+        end
         return bfn(...)
       end
       local dot = fn:find('%.')
