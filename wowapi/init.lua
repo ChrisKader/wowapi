@@ -39,7 +39,7 @@ return function(dir)
           end
         end
         assert(sig == t.inputs, ('invalid arguments to %q, expected %q, got %q'):format(fn, t.inputs, sig))
-        bfn(...)
+        return bfn(...)
       end
       local dot = fn:find('%.')
       if dot then
