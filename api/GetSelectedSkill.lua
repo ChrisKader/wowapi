@@ -1,4 +1,5 @@
 return {
   name = 'GetSelectedSkill',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

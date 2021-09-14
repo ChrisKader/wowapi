@@ -1,4 +1,5 @@
 return {
   name = 'GetNumSpecGroups',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

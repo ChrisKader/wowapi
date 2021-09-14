@@ -1,4 +1,5 @@
 return {
   name = 'GetChatTypeIndex',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

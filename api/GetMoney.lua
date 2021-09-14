@@ -1,4 +1,5 @@
 return {
   name = 'GetMoney',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

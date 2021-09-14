@@ -1,4 +1,5 @@
 return {
   name = 'C_Map.GetMapArtID',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

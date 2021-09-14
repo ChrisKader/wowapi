@@ -1,4 +1,5 @@
 return {
   name = 'GetNumRecruitingGuilds',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

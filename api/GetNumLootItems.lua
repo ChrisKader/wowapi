@@ -1,4 +1,5 @@
 return {
   name = 'GetNumLootItems',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

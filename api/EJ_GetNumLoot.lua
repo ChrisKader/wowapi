@@ -1,4 +1,5 @@
 return {
   name = 'EJ_GetNumLoot',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

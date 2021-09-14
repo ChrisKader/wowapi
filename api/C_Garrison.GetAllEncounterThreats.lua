@@ -1,4 +1,5 @@
 return {
   name = 'C_Garrison.GetAllEncounterThreats',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

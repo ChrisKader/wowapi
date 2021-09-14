@@ -1,4 +1,5 @@
 return {
   name = 'GetScreenWidth',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

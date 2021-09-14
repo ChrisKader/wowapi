@@ -1,4 +1,5 @@
 return {
   name = 'C_MountJournal.GetNumMountsNeedingFanfare',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

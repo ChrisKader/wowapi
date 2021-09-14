@@ -1,4 +1,5 @@
 return {
   name = 'GetActiveLootRollIDs',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

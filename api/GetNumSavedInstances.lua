@@ -1,4 +1,5 @@
 return {
   name = 'GetNumSavedInstances',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

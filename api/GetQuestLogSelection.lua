@@ -1,4 +1,5 @@
 return {
   name = 'GetQuestLogSelection',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

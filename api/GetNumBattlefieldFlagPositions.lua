@@ -1,4 +1,5 @@
 return {
   name = 'GetNumBattlefieldFlagPositions',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

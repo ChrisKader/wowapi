@@ -1,4 +1,5 @@
 return {
   name = 'GetNumQuestLogRewards',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

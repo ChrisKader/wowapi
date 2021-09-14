@@ -1,4 +1,5 @@
 return {
   name = 'GetNumArchaeologyRaces',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

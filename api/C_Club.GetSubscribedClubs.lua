@@ -1,4 +1,5 @@
 return {
   name = 'C_Club.GetSubscribedClubs',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

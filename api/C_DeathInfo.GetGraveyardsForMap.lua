@@ -1,4 +1,5 @@
 return {
   name = 'C_DeathInfo.GetGraveyardsForMap',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

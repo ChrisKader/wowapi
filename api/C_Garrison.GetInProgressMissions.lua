@@ -1,4 +1,5 @@
 return {
   name = 'C_Garrison.GetInProgressMissions',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

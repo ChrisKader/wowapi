@@ -1,4 +1,5 @@
 return {
   name = 'C_ScriptedAnimations.GetAllScriptedAnimationEffects',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

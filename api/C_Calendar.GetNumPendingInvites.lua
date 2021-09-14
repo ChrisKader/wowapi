@@ -1,4 +1,5 @@
 return {
   name = 'C_Calendar.GetNumPendingInvites',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

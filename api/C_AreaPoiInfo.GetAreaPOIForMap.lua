@@ -1,4 +1,5 @@
 return {
   name = 'C_AreaPoiInfo.GetAreaPOIForMap',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

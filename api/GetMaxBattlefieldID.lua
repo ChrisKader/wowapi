@@ -1,4 +1,5 @@
 return {
   name = 'GetMaxBattlefieldID',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

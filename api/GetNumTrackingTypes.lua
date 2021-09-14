@@ -1,4 +1,5 @@
 return {
   name = 'GetNumTrackingTypes',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

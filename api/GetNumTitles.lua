@@ -1,4 +1,5 @@
 return {
   name = 'GetNumTitles',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

@@ -1,4 +1,5 @@
 return {
   name = 'GetNumSpecializationsForClassID',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

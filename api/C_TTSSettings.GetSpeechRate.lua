@@ -1,4 +1,5 @@
 return {
   name = 'C_TTSSettings.GetSpeechRate',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

@@ -1,4 +1,5 @@
 return {
   name = 'GetQuestLogGroupNum',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

@@ -1,4 +1,5 @@
 return {
   name = 'GetComboPoints',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

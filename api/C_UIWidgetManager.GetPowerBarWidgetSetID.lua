@@ -1,4 +1,5 @@
 return {
   name = 'C_UIWidgetManager.GetPowerBarWidgetSetID',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

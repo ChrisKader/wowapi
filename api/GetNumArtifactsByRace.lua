@@ -1,4 +1,5 @@
 return {
   name = 'GetNumArtifactsByRace',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

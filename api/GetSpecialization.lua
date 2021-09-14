@@ -1,4 +1,5 @@
 return {
   name = 'GetSpecialization',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

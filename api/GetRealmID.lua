@@ -1,4 +1,5 @@
 return {
   name = 'GetRealmID',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

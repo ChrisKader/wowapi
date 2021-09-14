@@ -1,4 +1,5 @@
 return {
   name = 'C_LFGList.GetDefaultLanguageSearchFilter',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

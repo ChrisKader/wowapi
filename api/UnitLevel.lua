@@ -1,4 +1,5 @@
 return {
   name = 'UnitLevel',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

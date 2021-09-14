@@ -1,4 +1,5 @@
 return {
   name = 'C_CovenantSanctumUI.GetSoulCurrencies',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

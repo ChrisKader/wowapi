@@ -1,4 +1,5 @@
 return {
   name = 'GetMaxPlayerLevel',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

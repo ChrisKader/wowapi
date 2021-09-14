@@ -1,4 +1,5 @@
 return {
   name = 'C_LootHistory.GetNumItems',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

@@ -1,4 +1,5 @@
 return {
   name = 'GetNumBindings',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

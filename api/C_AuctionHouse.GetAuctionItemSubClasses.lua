@@ -1,4 +1,5 @@
 return {
   name = 'C_AuctionHouse.GetAuctionItemSubClasses',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

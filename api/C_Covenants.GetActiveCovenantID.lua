@@ -1,4 +1,5 @@
 return {
   name = 'C_Covenants.GetActiveCovenantID',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

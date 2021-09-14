@@ -1,4 +1,5 @@
 return {
   name = 'C_Club.GetInvitationsForSelf',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

@@ -1,4 +1,5 @@
 return {
   name = 'GetNumClasses',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

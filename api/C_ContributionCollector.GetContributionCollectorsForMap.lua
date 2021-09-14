@@ -1,4 +1,5 @@
 return {
   name = 'C_ContributionCollector.GetContributionCollectorsForMap',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

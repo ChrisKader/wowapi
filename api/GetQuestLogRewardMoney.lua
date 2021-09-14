@@ -1,4 +1,5 @@
 return {
   name = 'GetQuestLogRewardMoney',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

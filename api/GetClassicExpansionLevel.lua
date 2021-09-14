@@ -1,4 +1,5 @@
 return {
   name = 'GetClassicExpansionLevel',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

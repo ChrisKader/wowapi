@@ -1,4 +1,5 @@
 return {
   name = 'C_ClubFinder.GetPlayerApplicantSettings',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

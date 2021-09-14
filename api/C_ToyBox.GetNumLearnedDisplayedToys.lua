@@ -1,4 +1,5 @@
 return {
   name = 'C_ToyBox.GetNumLearnedDisplayedToys',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

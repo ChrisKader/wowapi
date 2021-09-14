@@ -1,4 +1,5 @@
 return {
   name = 'GetAccountExpansionLevel',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

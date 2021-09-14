@@ -1,4 +1,5 @@
 return {
   name = 'GetScreenHeight',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

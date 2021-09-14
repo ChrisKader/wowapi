@@ -1,4 +1,5 @@
 return {
   name = 'C_Soulbinds.GetActiveSoulbindID',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

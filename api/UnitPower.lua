@@ -1,4 +1,5 @@
 return {
   name = 'UnitPower',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

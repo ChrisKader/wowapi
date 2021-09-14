@@ -1,4 +1,5 @@
 return {
   name = 'C_PetBattles.GetIcon',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

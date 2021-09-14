@@ -1,4 +1,5 @@
 return {
   name = 'CombatLogGetNumEntries',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

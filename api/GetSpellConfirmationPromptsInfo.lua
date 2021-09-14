@@ -1,4 +1,5 @@
 return {
   name = 'GetSpellConfirmationPromptsInfo',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

@@ -1,4 +1,5 @@
 return {
   name = 'C_CurrencyInfo.GetCurrencyInfo',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

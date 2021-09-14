@@ -1,4 +1,5 @@
 return {
   name = 'C_FriendList.GetFriendInfoByIndex',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

@@ -1,4 +1,5 @@
 return {
   name = 'C_PetJournal.GetNumPetsNeedingFanfare',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

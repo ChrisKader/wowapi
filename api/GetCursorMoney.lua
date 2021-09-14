@@ -1,4 +1,5 @@
 return {
   name = 'GetCursorMoney',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

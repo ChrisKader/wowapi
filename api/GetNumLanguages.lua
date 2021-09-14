@@ -1,4 +1,5 @@
 return {
   name = 'GetNumLanguages',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

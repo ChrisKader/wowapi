@@ -1,4 +1,5 @@
 return {
   name = 'GetLFGDeserterExpiration',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

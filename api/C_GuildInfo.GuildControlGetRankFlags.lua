@@ -1,4 +1,5 @@
 return {
   name = 'C_GuildInfo.GuildControlGetRankFlags',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

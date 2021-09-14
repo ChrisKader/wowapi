@@ -1,4 +1,5 @@
 return {
   name = 'GetContainerNumSlots',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

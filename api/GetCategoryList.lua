@@ -1,4 +1,5 @@
 return {
   name = 'GetCategoryList',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

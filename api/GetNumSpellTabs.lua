@@ -1,4 +1,5 @@
 return {
   name = 'GetNumSpellTabs',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

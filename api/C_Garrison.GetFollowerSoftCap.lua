@@ -1,4 +1,5 @@
 return {
   name = 'C_Garrison.GetFollowerSoftCap',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

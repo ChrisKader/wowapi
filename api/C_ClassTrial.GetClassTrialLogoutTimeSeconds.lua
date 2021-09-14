@@ -1,4 +1,5 @@
 return {
   name = 'C_ClassTrial.GetClassTrialLogoutTimeSeconds',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

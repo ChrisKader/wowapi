@@ -1,4 +1,5 @@
 return {
   name = 'GetCorruption',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

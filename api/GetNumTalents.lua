@@ -1,4 +1,5 @@
 return {
   name = 'GetNumTalents',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

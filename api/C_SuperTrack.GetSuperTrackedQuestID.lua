@@ -1,4 +1,5 @@
 return {
   name = 'C_SuperTrack.GetSuperTrackedQuestID',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

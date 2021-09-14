@@ -1,4 +1,5 @@
 return {
   name = 'GetDefaultScale',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

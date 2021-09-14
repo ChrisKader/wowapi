@@ -1,4 +1,5 @@
 return {
   name = 'GetExtraBarIndex',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

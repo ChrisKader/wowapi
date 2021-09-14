@@ -1,4 +1,5 @@
 return {
   name = 'GetPlayerTradeMoney',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

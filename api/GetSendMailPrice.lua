@@ -1,4 +1,5 @@
 return {
   name = 'GetSendMailPrice',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

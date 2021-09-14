@@ -1,4 +1,5 @@
 return {
   name = 'QuestMapUpdateAllQuests',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

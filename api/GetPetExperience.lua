@@ -1,4 +1,5 @@
 return {
   name = 'GetPetExperience',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

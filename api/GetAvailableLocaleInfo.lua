@@ -1,4 +1,5 @@
 return {
   name = 'GetAvailableLocaleInfo',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

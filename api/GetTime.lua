@@ -1,4 +1,5 @@
 return {
   name = 'GetTime',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

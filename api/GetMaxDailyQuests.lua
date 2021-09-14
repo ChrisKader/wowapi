@@ -1,4 +1,5 @@
 return {
   name = 'GetMaxDailyQuests',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

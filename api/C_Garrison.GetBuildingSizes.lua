@@ -1,4 +1,5 @@
 return {
   name = 'C_Garrison.GetBuildingSizes',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

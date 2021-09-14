@@ -1,4 +1,5 @@
 return {
   name = 'GetNumSkillLines',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

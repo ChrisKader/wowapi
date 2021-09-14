@@ -1,4 +1,5 @@
 return {
   name = 'GetLootThreshold',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

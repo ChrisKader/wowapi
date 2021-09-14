@@ -1,4 +1,5 @@
 return {
   name = 'GetAuctionDeposit',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

@@ -1,4 +1,5 @@
 return {
   name = 'UnitPVPRank',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

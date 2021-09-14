@@ -1,4 +1,5 @@
 return {
   name = 'GetNumMacros',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

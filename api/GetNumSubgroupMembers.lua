@@ -1,4 +1,5 @@
 return {
   name = 'GetNumSubgroupMembers',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

@@ -1,4 +1,5 @@
 return {
   name = 'GetDailyQuestsCompleted',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

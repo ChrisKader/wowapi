@@ -1,4 +1,5 @@
 return {
   name = 'GetTabardCreationCost',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

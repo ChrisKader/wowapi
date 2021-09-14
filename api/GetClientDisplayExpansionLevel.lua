@@ -1,4 +1,5 @@
 return {
   name = 'GetClientDisplayExpansionLevel',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

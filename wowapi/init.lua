@@ -4,13 +4,13 @@ local STUB_TABLE = function() return {} end
 local function getFn(t)
   if t.status == 'unimplemented' then
     assert(t.impl == nil)
-    return UNIMPLEMENTED
-  elseif t.status == 'stubnumber' then
-    assert(t.impl == nil)
-    return STUB_NUMBER
-  elseif t.status == 'stubtable' then
-    assert(t.impl == nil)
-    return STUB_TABLE
+    if t.outputs == 'n' then
+      return STUB_NUMBER
+    elseif t.outputs == 't' then
+      return STUB_TABLE
+    else
+      return UNIMPLEMENTED
+    end
   elseif t.status == 'stub' then
     return assert(t.impl)
   else

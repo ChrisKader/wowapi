@@ -1,4 +1,5 @@
 return {
   name = 'BankButtonIDToInvSlotID',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

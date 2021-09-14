@@ -1,4 +1,5 @@
 return {
   name = 'C_Calendar.EventGetTypesDisplayOrdered',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

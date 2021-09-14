@@ -1,4 +1,5 @@
 return {
   name = 'GetPartyLFGID',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

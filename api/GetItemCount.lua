@@ -1,4 +1,5 @@
 return {
   name = 'GetItemCount',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

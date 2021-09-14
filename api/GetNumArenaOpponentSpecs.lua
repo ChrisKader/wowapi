@@ -1,4 +1,5 @@
 return {
   name = 'GetNumArenaOpponentSpecs',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

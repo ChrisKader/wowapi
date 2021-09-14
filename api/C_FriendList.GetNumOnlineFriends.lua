@@ -1,4 +1,5 @@
 return {
   name = 'C_FriendList.GetNumOnlineFriends',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

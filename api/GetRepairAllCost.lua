@@ -1,4 +1,5 @@
 return {
   name = 'GetRepairAllCost',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

@@ -1,4 +1,5 @@
 return {
   name = 'C_UIWidgetManager.GetAllWidgetsBySetID',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

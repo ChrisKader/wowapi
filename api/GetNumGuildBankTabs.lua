@@ -1,4 +1,5 @@
 return {
   name = 'GetNumGuildBankTabs',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

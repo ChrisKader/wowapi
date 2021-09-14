@@ -1,4 +1,5 @@
 return {
   name = 'GetNumBattlegroundTypes',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

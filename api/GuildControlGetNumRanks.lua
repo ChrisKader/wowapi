@@ -1,4 +1,5 @@
 return {
   name = 'GuildControlGetNumRanks',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

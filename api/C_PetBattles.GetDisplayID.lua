@@ -1,4 +1,5 @@
 return {
   name = 'C_PetBattles.GetDisplayID',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

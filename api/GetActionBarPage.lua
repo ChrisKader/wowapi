@@ -1,4 +1,5 @@
 return {
   name = 'GetActionBarPage',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

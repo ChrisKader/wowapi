@@ -1,4 +1,5 @@
 return {
   name = 'C_Garrison.GetFollowers',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

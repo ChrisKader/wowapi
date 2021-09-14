@@ -1,4 +1,5 @@
 return {
   name = 'GetActionCount',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

@@ -1,4 +1,5 @@
 return {
   name = 'GetQuestLogTimeLeft',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

@@ -1,4 +1,5 @@
 return {
   name = 'GetMultiCastBarIndex',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

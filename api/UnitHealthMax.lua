@@ -1,4 +1,5 @@
 return {
   name = 'UnitHealthMax',
-  status = 'stubnumber',
+  status = 'unimplemented',
+  outputs = 'n',
 }

@@ -1,4 +1,5 @@
 return {
   name = 'C_MapExplorationInfo.GetExploredMapTextures',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }

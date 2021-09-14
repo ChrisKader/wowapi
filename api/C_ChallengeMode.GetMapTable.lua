@@ -1,4 +1,5 @@
 return {
   name = 'C_ChallengeMode.GetMapTable',
-  status = 'stubtable',
+  status = 'unimplemented',
+  outputs = 't',
 }
