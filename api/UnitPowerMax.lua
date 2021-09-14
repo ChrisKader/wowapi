@@ -1,6 +1,6 @@
 return {
   name = 'UnitPowerMax',
   status = 'unimplemented',
-  inputs = 's',
+  inputs = 'sn',
   outputs = 'n',
 }
