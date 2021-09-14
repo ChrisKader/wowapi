@@ -1,24 +1,30 @@
-local UNIMPLEMENTED = function() end
-local STUB_NUMBER = function() return 1 end
-local STUB_TABLE = function() return {} end
-local STUB_PREDICATE = function() return false end
-local STUB_STRING = function() return '' end
+local stubs = {}
+
+local defaults = {
+  b = 'false',
+  n = '1',
+  s = '\'\'',
+  t = '{}',
+  x = 'nil',
+  z = 'nil',
+}
+
 local function getFn(t)
   if t.status == 'unimplemented' then
     assert(t.impl == nil)
-    if t.outputs == 'n' then
-      return STUB_NUMBER
-    elseif t.outputs == 't' then
-      return STUB_TABLE
-    elseif t.outputs == 'b' then
-      return STUB_PREDICATE
-    elseif t.outputs == 's' then
-      return STUB_STRING
-    elseif t.outputs == '' or t.outputs == 'z' or t.outputs == nil then
-      return UNIMPLEMENTED
-    else
-      error(('invalid output signature %q on %q'):format(t.outputs, t.name))
+    local sig = t.outputs or ''
+    local stub = stubs[sig]
+    if not stub then
+      local rets = {}
+      for i = 1, string.len(sig) do
+        local v = defaults[sig:sub(i, i)]
+        assert(v, ('invalid output signature %q on %q'):format(sig, t.name))
+        table.insert(rets, v)
+      end
+      stub = loadstring('return function() return ' .. table.concat(rets, ', ') .. ' end')()
+      stubs[sig] = stub
     end
+    return stub
   elseif t.status == 'stub' then
     return assert(t.impl)
   else
