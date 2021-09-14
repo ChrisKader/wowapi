@@ -1,6 +1,7 @@
 local UNIMPLEMENTED = function() end
 local STUB_NUMBER = function() return 1 end
 local STUB_TABLE = function() return {} end
+local STUB_PREDICATE = function() return false end
 local function getFn(t)
   if t.status == 'unimplemented' then
     assert(t.impl == nil)
@@ -8,8 +9,12 @@ local function getFn(t)
       return STUB_NUMBER
     elseif t.outputs == 't' then
       return STUB_TABLE
-    else
+    elseif t.outputs == 'b' then
+      return STUB_PREDICATE
+    elseif t.outputs == 'z' or t.outputs == nil then
       return UNIMPLEMENTED
+    else
+      error(('invalid output signature %q on %q'):format(t.outputs, t.name))
     end
   elseif t.status == 'stub' then
     return assert(t.impl)
