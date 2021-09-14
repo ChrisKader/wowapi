@@ -14,7 +14,7 @@ local function getFn(t)
       return STUB_PREDICATE
     elseif t.outputs == 's' then
       return STUB_STRING
-    elseif t.outputs == 'z' or t.outputs == nil then
+    elseif t.outputs == '' or t.outputs == 'z' or t.outputs == nil then
       return UNIMPLEMENTED
     else
       error(('invalid output signature %q on %q'):format(t.outputs, t.name))
