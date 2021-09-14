@@ -2,6 +2,7 @@ local UNIMPLEMENTED = function() end
 local STUB_NUMBER = function() return 1 end
 local STUB_TABLE = function() return {} end
 local STUB_PREDICATE = function() return false end
+local STUB_STRING = function() return '' end
 local function getFn(t)
   if t.status == 'unimplemented' then
     assert(t.impl == nil)
@@ -11,6 +12,8 @@ local function getFn(t)
       return STUB_TABLE
     elseif t.outputs == 'b' then
       return STUB_PREDICATE
+    elseif t.outputs == 's' then
+      return STUB_STRING
     elseif t.outputs == 'z' or t.outputs == nil then
       return UNIMPLEMENTED
     else
