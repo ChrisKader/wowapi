@@ -21,7 +21,7 @@ local function getFn(t)
         assert(v, ('invalid output signature %q on %q'):format(sig, t.name))
         table.insert(rets, v)
       end
-      stub = loadstring('return function() return ' .. table.concat(rets, ', ') .. ' end')()
+      stub = loadstring('return ' .. table.concat(rets, ', '))
       stubs[sig] = stub
     end
     return stub
