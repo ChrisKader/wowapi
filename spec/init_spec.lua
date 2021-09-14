@@ -1,0 +1,5 @@
+describe('init', function()
+  it('loads', function()
+    assert.same('table', type(dofile('wowapi/init.lua')('api')))
+  end)
+end)
