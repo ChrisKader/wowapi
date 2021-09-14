@@ -1,9 +1,12 @@
 describe('api', function()
+  local env = {
+    require = require,
+  }
   for f in require('lfs').dir('api') do
     if f:sub(-4) == '.lua' then
       local fn = f:sub(1, -5)
       describe(fn, function()
-        local t = setfenv(loadfile('api/' .. f), {})()
+        local t = setfenv(loadfile('api/' .. f), env)()
         it('has the right name', function()
           assert.same(fn, t.name)
         end)
