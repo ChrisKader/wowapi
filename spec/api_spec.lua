@@ -7,11 +7,13 @@ describe('api', function()
         it('has the right name', function()
           assert.same(fn, t.name)
         end)
-        local impl = t.impl
-        for _, test in ipairs(t.tests or {}) do
-          (test.pending and pending or it)(test.name, function()
-            assert.same(test.outputs, {impl(unpack(test.inputs))})
-          end)
+        if t.impl and t.tests then
+          local impl = setfenv(t.impl, {})
+          for _, test in ipairs(t.tests) do
+            (test.pending and pending or it)(test.name, function()
+              assert.same(test.outputs, {impl(unpack(test.inputs))})
+            end)
+          end
         end
       end)
     end
