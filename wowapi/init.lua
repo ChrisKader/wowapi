@@ -7,6 +7,7 @@ local defaults = {
   t = '{}',
   x = 'nil',
   z = 'nil',
+  ['?'] = 'nil',
 }
 
 local function getFn(t)
