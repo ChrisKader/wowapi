@@ -1,15 +1,20 @@
-local function loadApis(dir)
-  local apis = {}
-  for f in require('lfs').dir(dir) do
-    if f:sub(-4) == '.lua' then
-      local fn = f:sub(1, -5)
-      local api = dofile(dir .. '/' .. f)
-      assert(fn == api.name, ('invalid name %q in %q'):format(api.name, f))
-      apis[fn] = api
+local loadApis = (function()
+  local env = {
+    require = require,
+  }
+  return function(dir)
+    local apis = {}
+    for f in require('lfs').dir(dir) do
+      if f:sub(-4) == '.lua' then
+        local fn = f:sub(1, -5)
+        local api = setfenv(loadfile(dir .. '/' .. f), env)()
+        assert(fn == api.name, ('invalid name %q in %q'):format(api.name, f))
+        apis[fn] = api
+      end
     end
+    return apis
   end
-  return apis
-end
+end)()
 
 local getStub = (function()
   local defaultOutputs = {
@@ -92,7 +97,7 @@ local function getFn(api)
   end
 end
 
-return function(dir)
+local function loadFunctions(dir)
   local fns = {}
   for fn, api in pairs(loadApis(dir)) do
     local bfn = getFn(api)
@@ -111,3 +116,8 @@ return function(dir)
   end
   return fns
 end
+
+return {
+  loadApis = loadApis,
+  loadFunctions = loadFunctions,
+}

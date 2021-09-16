@@ -1,5 +1,5 @@
 describe('init', function()
   it('loads', function()
-    assert.same('table', type(dofile('wowapi/init.lua')('api')))
+    assert.same('table', type(dofile('wowapi/init.lua').loadFunctions('api')))
   end)
 end)
