@@ -53,7 +53,7 @@ for f, t in pairs(docs) do
           print('unknown type ' .. a.Type)
           c = '?'
         end
-        firstDefault = firstDefault or (a.Default and i)
+        firstDefault = firstDefault or ((a.Default or a.Nilable) and i)
         inputs = inputs .. c
       end
       if firstDefault then
