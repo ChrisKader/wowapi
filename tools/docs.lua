@@ -71,16 +71,14 @@ local function insig(fn)
     firstDefault = firstDefault or ((a.Default or a.Nilable) and i)
     inputs = inputs .. c
   end
+  local t = {}
   if firstDefault then
-    local s = '{'
     for i = firstDefault, inputs:len() do
-      s = s .. ' \'' .. inputs:sub(1, i-1) .. '\','
+      table.insert(t, inputs:sub(1, i-1))
     end
-    inputs = s .. ' \'' .. inputs .. '\' }'
-  else
-    inputs = '\'' .. inputs .. '\''
   end
-  return inputs
+  table.insert(t, inputs)
+  return t
 end
 local function outsig(fn)
   local outputs = ''
@@ -111,6 +109,13 @@ end
 for name, envfn in pairs(functions) do
   local fn = envfn.wow or envfn.wow_classic or envfn.wow_classic_era
   if fn then
+    local inputs = insig(fn)
+    local instr
+    if #inputs == 1 then
+      instr = '\'' .. inputs[1] .. '\''
+    else
+      instr = '{ \'' .. table.concat(inputs, '\', \'') .. '\' }'
+    end
     pf.write(outdir .. '/' .. name .. '.lua', ([[
 return {
   name = '%s',
@@ -118,6 +123,6 @@ return {
   inputs = %s,
   outputs = '%s',
 }
-]]):format(name, insig(fn), outsig(fn)))
+]]):format(name, instr, outsig(fn)))
   end
 end
