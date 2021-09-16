@@ -67,7 +67,7 @@ for f, t in pairs(docs) do
       end
       local outputs = ''
       for _, r in ipairs(fn.Returns or {}) do
-        local c = types[r.Type] or tys[r.Type] or (enum[r.Type] and 'n')
+        local c = (r.Nilable and 'x') or types[r.Type] or tys[r.Type] or (enum[r.Type] and 'n')
         if not c then
           print('unknown type ' .. r.Type)
           c = '?'
