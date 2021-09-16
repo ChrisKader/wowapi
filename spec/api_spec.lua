@@ -20,6 +20,10 @@ describe('api', function()
           assert.True(ty == 'string' or ty == 'nil')
         end
       end)
+      it('has valid outputs', function()
+        local ty = type(t.outputs)
+        assert.True(ty == 'string' or ty == 'nil')
+      end)
       if t.impl and t.tests then
         local impl = t.impl
         for _, test in ipairs(t.tests) do
