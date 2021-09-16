@@ -54,6 +54,10 @@ return function(dir)
             sig = sig .. 's'
           elseif ty == 'number' then
             sig = sig .. 'n'
+          elseif ty == 'table' then
+            sig = sig .. 't'
+          elseif ty == 'boolean' then
+            sig = sig .. 'b'
           else
             error(('invalid argument %d of type %q to %q'):format(i, ty, fn))
           end
