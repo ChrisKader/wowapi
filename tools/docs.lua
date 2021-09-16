@@ -45,7 +45,7 @@ local tables = {
 local tys = {}
 -- First pass for types.
 for _, envt in pairs(docs) do
-  for env, t in pairs(envt) do
+  for _, t in pairs(envt) do
     for _, ty in ipairs(t.Tables or {}) do
       local c = assert(tables[ty.Type])
       local old = tys[ty.Name]
