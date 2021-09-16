@@ -1,23 +1,34 @@
 local indir, outdir = unpack(arg)
 local lfs = require('lfs')
 local pf = require('pl.file')
+local tags = {
+  'wow',
+  'wowt',
+  'wow_classic',
+  'wow_classic_era',
+  'wow_classic_era_ptr',
+  'wow_classic_ptr',
+}
 local docs = {}
-local docdir = indir .. '/Interface/AddOns/Blizzard_APIDocumentation'
-for f in lfs.dir(docdir) do
-  if f:sub(-4) == '.lua' then
-    pcall(setfenv(loadfile(docdir .. '/' .. f), {
-      APIDocumentation = {
-        AddDocumentationTable = function(_, t)
-          docs[f] = t
-        end,
-      }
-    }))
+local enums = {}
+for _, tag in ipairs(tags) do
+  local tagdir = indir .. '/' .. tag
+  local docdir = tagdir .. '/Interface/AddOns/Blizzard_APIDocumentation'
+  for f in lfs.dir(docdir) do
+    if f:sub(-4) == '.lua' then
+      pcall(setfenv(loadfile(docdir .. '/' .. f), {
+        APIDocumentation = {
+          AddDocumentationTable = function(_, t)
+            docs[f] = docs[f] or {}
+            docs[f][tag] = t
+          end,
+        }
+      }))
+    end
   end
-end
-local enum do
   local env = {}
-  setfenv(loadfile(indir .. '/Interface/GlobalEnvironment.lua'), env)()
-  enum = assert(env.Enum)
+  setfenv(loadfile(tagdir .. '/Interface/GlobalEnvironment.lua'), env)()
+  enums[tag] = assert(env.Enum)
 end
 lfs.mkdir(outdir)
 local types = {
@@ -33,14 +44,17 @@ local tables = {
 }
 local tys = {}
 -- First pass for types.
-for _, t in pairs(docs) do
+for _, envt in pairs(docs) do
+  local t = envt.wow or {}
   for _, ty in ipairs(t.Tables or {}) do
     assert(tys[ty.Name] == nil)
     tys[ty.Name] = assert(tables[ty.Type], ty.Type)
   end
 end
-for f, t in pairs(docs) do
-  if t.Name then
+local enum = enums.wow
+for f, envt in pairs(docs) do
+  local t = envt.wow
+  if t and t.Name then
     assert(t.Type == 'System', f)
     for _, fn in ipairs(t.Functions or {}) do
       assert(fn.Type == 'Function', f)
@@ -83,7 +97,7 @@ return {
 }
 ]]):format(name, inputs, outputs))
     end
-  else
+  elseif t then
     assert(t.Tables, f)
   end
 end
