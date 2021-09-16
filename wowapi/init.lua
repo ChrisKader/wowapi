@@ -1,6 +1,13 @@
 local stubs = {}
 
-local defaults = {
+local typeSigs = {
+  boolean = 'b',
+  number = 'n',
+  string = 's',
+  table = 't',
+}
+
+local defaultOutputs = {
   b = 'false',
   n = '1',
   s = '\'\'',
@@ -18,7 +25,7 @@ local function getFn(t)
     if not stub then
       local rets = {}
       for i = 1, string.len(sig) do
-        local v = defaults[sig:sub(i, i)]
+        local v = defaultOutputs[sig:sub(i, i)]
         assert(v, ('invalid output signature %q on %q'):format(sig, t.name))
         table.insert(rets, v)
       end
@@ -50,17 +57,11 @@ return function(dir)
         local sig = ''
         for i = 1, last do
           local ty = type((select(i, ...)))
-          if ty == 'string' then
-            sig = sig .. 's'
-          elseif ty == 'number' then
-            sig = sig .. 'n'
-          elseif ty == 'table' then
-            sig = sig .. 't'
-          elseif ty == 'boolean' then
-            sig = sig .. 'b'
-          else
+          local c = typeSigs[ty]
+          if not c then
             error(('invalid argument %d of type %q to %q'):format(i, ty, fn))
           end
+          sig = sig .. c
         end
         if type(t.inputs) == 'string' then
           assert(sig == t.inputs, ('invalid arguments to %q, expected %q, got %q'):format(fn, t.inputs, sig))
