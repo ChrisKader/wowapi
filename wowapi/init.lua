@@ -49,6 +49,7 @@ local argSig = (function()
   local typeSigs = {
     boolean = 'b',
     ['function'] = 'f',
+    ['nil'] = 'x',
     number = 'n',
     string = 's',
     table = 't',

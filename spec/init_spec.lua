@@ -13,7 +13,7 @@ describe('init', function()
       local s = 'foo'
       local t = {}
       local u = newproxy()
-      assert.same('bfnstu', wowapi.argSig('name', b, f, n, s, t, u))
+      assert.same('xbfnstu', wowapi.argSig('name', nil, b, f, n, s, t, u))
     end)
   end)
 end)
