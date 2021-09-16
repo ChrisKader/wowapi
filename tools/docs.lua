@@ -58,6 +58,41 @@ for _, envt in pairs(docs) do
   end
 end
 local enum = enums.wow
+local function insig(fn)
+  local inputs = ''
+  local firstDefault = nil
+  for i, a in ipairs(fn.Arguments or {}) do
+    local c = types[a.Type] or tys[a.Type] or (enum[a.Type] and 'n')
+    if not c then
+      print('unknown type ' .. a.Type)
+      c = '?'
+    end
+    firstDefault = firstDefault or ((a.Default or a.Nilable) and i)
+    inputs = inputs .. c
+  end
+  if firstDefault then
+    local s = '{'
+    for i = firstDefault, inputs:len() do
+      s = s .. ' \'' .. inputs:sub(1, i-1) .. '\','
+    end
+    inputs = s .. ' \'' .. inputs .. '\' }'
+  else
+    inputs = '\'' .. inputs .. '\''
+  end
+  return inputs
+end
+local function outsig(fn)
+  local outputs = ''
+  for _, r in ipairs(fn.Returns or {}) do
+    local c = (r.Nilable and 'x') or types[r.Type] or tys[r.Type] or (enum[r.Type] and 'n')
+    if not c then
+      print('unknown type ' .. r.Type)
+      c = '?'
+    end
+    outputs = outputs .. c
+  end
+  return outputs
+end
 for f, envt in pairs(docs) do
   local t = envt.wow
   if t and t.Name then
@@ -65,35 +100,6 @@ for f, envt in pairs(docs) do
     for _, fn in ipairs(t.Functions or {}) do
       assert(fn.Type == 'Function', f)
       local name = (t.Namespace and (t.Namespace .. '.') or '') .. fn.Name
-      local inputs = ''
-      local firstDefault = nil
-      for i, a in ipairs(fn.Arguments or {}) do
-        local c = types[a.Type] or tys[a.Type] or (enum[a.Type] and 'n')
-        if not c then
-          print('unknown type ' .. a.Type)
-          c = '?'
-        end
-        firstDefault = firstDefault or ((a.Default or a.Nilable) and i)
-        inputs = inputs .. c
-      end
-      if firstDefault then
-        local s = '{'
-        for i = firstDefault, inputs:len() do
-          s = s .. ' \'' .. inputs:sub(1, i-1) .. '\','
-        end
-        inputs = s .. ' \'' .. inputs .. '\' }'
-      else
-        inputs = '\'' .. inputs .. '\''
-      end
-      local outputs = ''
-      for _, r in ipairs(fn.Returns or {}) do
-        local c = (r.Nilable and 'x') or types[r.Type] or tys[r.Type] or (enum[r.Type] and 'n')
-        if not c then
-          print('unknown type ' .. r.Type)
-          c = '?'
-        end
-        outputs = outputs .. c
-      end
       pf.write(outdir .. '/' .. name .. '.lua', ([[
 return {
   name = '%s',
@@ -101,7 +107,7 @@ return {
   inputs = %s,
   outputs = '%s',
 }
-]]):format(name, inputs, outputs))
+]]):format(name, insig(fn), outsig(fn)))
     end
   elseif t then
     assert(t.Tables, f)
