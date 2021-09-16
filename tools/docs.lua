@@ -10,7 +10,7 @@ local tags = {
   'wow_classic_ptr',
 }
 local docs = {}
-local enums = {}
+local enum = {}
 for _, tag in ipairs(tags) do
   local tagdir = indir .. '/' .. tag
   local docdir = tagdir .. '/Interface/AddOns/Blizzard_APIDocumentation'
@@ -28,7 +28,9 @@ for _, tag in ipairs(tags) do
   end
   local env = {}
   setfenv(loadfile(tagdir .. '/Interface/GlobalEnvironment.lua'), env)()
-  enums[tag] = assert(env.Enum)
+  for en in pairs(env.Enum) do
+    enum[en] = true
+  end
 end
 lfs.mkdir(outdir)
 local types = {
@@ -57,7 +59,6 @@ for _, envt in pairs(docs) do
     end
   end
 end
-local enum = enums.wow
 local function insig(fn)
   local inputs = ''
   local firstDefault = nil
