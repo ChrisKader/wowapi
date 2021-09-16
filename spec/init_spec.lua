@@ -1,5 +1,19 @@
 describe('init', function()
+  local wowapi = dofile('wowapi/init.lua')
+
   it('loads', function()
-    assert.same('table', type(dofile('wowapi/init.lua').loadFunctions('api')))
+    assert.same('table', type(wowapi.loadFunctions('api')))
+  end)
+
+  describe('argSig', function()
+    it('handles all types', function()
+      local b = true
+      local f = function() end
+      local n = 1
+      local s = 'foo'
+      local t = {}
+      local u = newproxy()
+      assert.same('bfnstu', wowapi.argSig('name', b, f, n, s, t, u))
+    end)
   end)
 end)

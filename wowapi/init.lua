@@ -8,7 +8,6 @@ local loadApis = (function()
       if f:sub(-4) == '.lua' then
         local fn = f:sub(1, -5)
         local api = setfenv(loadfile(dir .. '/' .. f), env)()
-        assert(fn == api.name, ('invalid name %q in %q'):format(api.name, f))
         apis[fn] = api
       end
     end
@@ -49,9 +48,11 @@ end)()
 local argSig = (function()
   local typeSigs = {
     boolean = 'b',
+    ['function'] = 'f',
     number = 'n',
     string = 's',
     table = 't',
+    userdata = 'u',
   }
   return function(fn, ...)
     -- Ignore trailing nils for our purposes.
@@ -118,6 +119,7 @@ local function loadFunctions(dir)
 end
 
 return {
+  argSig = argSig,
   loadApis = loadApis,
   loadFunctions = loadFunctions,
 }
