@@ -109,7 +109,7 @@ for f, envt in pairs(docs) do
   end
 end
 for name, envfn in pairs(functions) do
-  local fn = envfn.wow
+  local fn = envfn.wow or envfn.wow_classic or envfn.wow_classic_era
   if fn then
     pf.write(outdir .. '/' .. name .. '.lua', ([[
 return {
