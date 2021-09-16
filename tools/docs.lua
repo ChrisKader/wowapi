@@ -45,10 +45,16 @@ local tables = {
 local tys = {}
 -- First pass for types.
 for _, envt in pairs(docs) do
-  local t = envt.wow or {}
-  for _, ty in ipairs(t.Tables or {}) do
-    assert(tys[ty.Name] == nil)
-    tys[ty.Name] = assert(tables[ty.Type], ty.Type)
+  for env, t in pairs(envt) do
+    for _, ty in ipairs(t.Tables or {}) do
+      local c = assert(tables[ty.Type])
+      local old = tys[ty.Name]
+      if old then
+        assert(old == c)
+      else
+        tys[ty.Name] = c
+      end
+    end
   end
 end
 local enum = enums.wow
