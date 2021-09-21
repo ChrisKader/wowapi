@@ -82,7 +82,7 @@ local function checkSig(fn, apisig, fsig)
     for _, x in ipairs(apisig) do
       ok = ok or fsig == x
     end
-    assert(ok, ('invalid arguments to %q, expected one of %q, got %q'):format(fn, table.concat(apisig), fsig))
+    assert(ok, ('invalid arguments to %q, expected one of {%s}, got %q'):format(fn, table.concat(apisig, ', '), fsig))
   else
     error(('invalid inputs type on %q'):format(fn))
   end
