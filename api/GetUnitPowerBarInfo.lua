@@ -1,6 +1,5 @@
 return {
-  name = 'GetUnitPowerBarInfo',
-  status = 'stub',
+  name = 'GetUnitPowerBarInfo',  status = 'stub',
   inputs = 's',
   outputs = 't',
   impl = function()
@@ -23,5 +22,5 @@ return {
       animateNumbers = true,
     }
     return tbl
-  end,
+  end
 }
