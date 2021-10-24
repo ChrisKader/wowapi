@@ -3,7 +3,7 @@ return {
   status = 'stub',
   inputs = {'','n'},
   outputs = 't',
-  impl = function(n)
+  impl = function()
     local tbl = {
       name = "Test",
       isHeader = true,

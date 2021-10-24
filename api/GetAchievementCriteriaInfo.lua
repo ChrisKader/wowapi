@@ -1,9 +1,9 @@
 return {
-  name = 'GetAchievementCriteriaInfo',
-  status = 'stub',
-  inputs = {'ss','nn','ns','sn'},
-  outputs = 'snbnnsnnsnbnn',
-  impl = function(s)
+  name = "GetAchievementCriteriaInfo",
+  status = "stub",
+  inputs = {"ss", "nn", "ns", "sn"},
+  outputs = "snbnnsnnsnbnn",
+  impl = function()
     local criteriaString = "0"
     local criteriaType = 0
     local completed = false
@@ -17,6 +17,8 @@ return {
     local eligible = true
     local duration = 30
     local elapsed = 5
-    return criteriaString, criteriaType, completed, quantity, reqQuantity, charName, flags, assetID, quantityString, criteriaID, eligible, duration, elapsed
-  end,
+    return criteriaString, criteriaType, completed, quantity,
+           reqQuantity, charName, flags, assetID, quantityString,
+           criteriaID, eligible, duration, elapsed
+  end
 }

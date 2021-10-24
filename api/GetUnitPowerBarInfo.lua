@@ -3,7 +3,7 @@ return {
   status = 'stub',
   inputs = 's',
   outputs = 't',
-  impl = function(s)
+  impl = function()
     local tbl = {
       id = 1,
       barType = 2,

@@ -3,7 +3,7 @@ return {
   status = 'stub',
   inputs = {'s','n'},
   outputs = 'n',
-  impl = function(s)
+  impl = function()
     return 5
   end,
 }

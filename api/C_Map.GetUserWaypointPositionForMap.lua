@@ -3,7 +3,7 @@ return {
   status = 'stub',
   inputs = 'n',
   outputs = 't',
-  impl = function(n)
+  impl = function()
     local function Vector2D_Dot(leftX, leftY, rightX, rightY)
       return leftX * rightX + leftY * rightY;
     end
