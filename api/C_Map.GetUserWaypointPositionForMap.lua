@@ -15,44 +15,21 @@ return {
     end
 
     local tbl = {
-      IsEqualTo = function()
-        return true
-      end,
-      GetXY = function()
-        return 1,1
-      end,
-      SetXY = function()
-        return true
-      end,
-      ScaleBy = function()
-      end,
-      DivideBy = function()
-      end,
-      Add = function()
-      end,
-      Subtract = function()
-      end,
-      Cross = function()
-      end,
-      Dot = function(self,other)
-        return Vector2D_Dot(self.x, self.y, other:GetXY());
-      end,
-      IsZero = function()
-        return false
-      end,
-      GetLengthSquared = function(self)
-        return Vector2D_GetLengthSquared(self:GetXY());
-      end,
-      GetLength = function(self)
-        return Vector2D_GetLength(self:GetXY());
-      end,
-      Normalize = function()
-      end,
-      RotateDirection = function()
-      end,
-      Clone = function(self)
-        return self;
-      end,
+      Add = function() end,
+      Clone = function(self) return self; end,
+      Cross = function() end,
+      DivideBy = function() end,
+      Dot = function(self,other) return Vector2D_Dot(self.x, self.y, other:GetXY()); end,
+      GetLength = function(self) return Vector2D_GetLength(self:GetXY()); end,
+      GetLengthSquared = function(self) return Vector2D_GetLengthSquared(self:GetXY()); end,
+      GetXY = function() return 1,1 end,
+      IsEqualTo = function()return true end,
+      IsZero = function() return false end,
+      Normalize = function()  end,
+      RotateDirection = function() end,
+      ScaleBy = function() end,
+      SetXY = function() return true end,
+      Subtract = function() end,
     }
     return tbl
   end

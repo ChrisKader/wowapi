@@ -1,26 +1,26 @@
 return {
-  name = 'GetUnitPowerBarInfo',  status = 'stub',
+  name = 'GetUnitPowerBarInfo',
+  status = 'stub',
   inputs = 's',
   outputs = 't',
   impl = function()
-    local tbl = {
-      id = 1,
-      barType = 2,
-      minPower = 0,
-      startInset = 0,
-      endInset = 0,
-      smooth = true,
-      hideFromOthers = true,
-      showOnRaid = true,
-      opaqueSpark = true,
-      opaqueFlash = true,
+    return {
       anchorTop = true,
-      forcePercentage = true,
-      sparkUnderFrame = true,
-      flashAtMinPower = true,
-      fractionalCounter = true,
       animateNumbers = true,
+      barType = 2,
+      endInset = 0,
+      flashAtMinPower = true,
+      forcePercentage = true,
+      fractionalCounter = true,
+      hideFromOthers = true,
+      id = 1,
+      minPower = 0,
+      opaqueFlash = true,
+      opaqueSpark = true,
+      showOnRaid = true,
+      smooth = true,
+      sparkUnderFrame = true,
+      startInset = 0,
     }
-    return tbl
   end
 }

@@ -4,24 +4,23 @@ return {
   inputs = {'','n'},
   outputs = 't',
   impl = function()
-    local tbl = {
-      name = "Test",
+    return {
+      canEarnPerWeek = true,
+      discovered = true,
+      iconFileID = 136235,
       isHeader = true,
       isHeaderExpanded = true,
-      isTypeUnused = true,
       isShowInBackpack = true,
-      quantity = 9999,
-      iconFileID = 136235,
-      maxQuantity = 9999999,
-      canEarnPerWeek = true,
-      quantityEarnedThisWeek = 1,
       isTradeable = false,
-      quality = 6,
+      isTypeUnused = true,
+      maxQuantity = 9999999,
       maxWeeklyQuantity = 6,
+      name = "Test",
+      quality = 6,
+      quantity = 9999,
+      quantityEarnedThisWeek = 1,
       totalEarned = 99999,
-      discovered = true,
       useTotalEarnedForMaxQty = false
     }
-    return tbl
   end,
 }
